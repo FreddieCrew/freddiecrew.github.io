@@ -1,11 +1,14 @@
-import Image from 'next/image'
-import Header from '../../components/header';
+'use client'
 import Footer from '../../components/Footer';
 import Head from 'next/head';
+import Header from '../../components/header';
+import Toast from '../../components/Toast';
 
 export default function Home() {
+
   return (
     <div className='root'>
+      <Toast />
       <Head>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
