@@ -1,15 +1,37 @@
 import React from 'react';
 import Image from 'next/image'
+import Toast, { showToast } from './Toast';
+
 
 const Header = () => {
+    const handleShowSuccessToast = () => {
+        showToast('Discord user succesfully copied to the clipboard', 'success');
+      };
+
+      const handleDivClick = () => {
+        try {
+          const textarea = document.createElement('textarea');
+          textarea.value = 'curl7120';
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          showToast('Discord user successfully copied to the clipboard', 'success');
+        } catch (error) {
+            showToast('Failed to copy username to the clipboard', 'error');
+        }
+      };
+
+
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-2 lg:text-left">
+        <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-2 lg:text-left" onClick={handleShowSuccessToast}>
             <a
-                href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-400 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+                
+                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-400 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 cursor-pointer"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleDivClick}
             >
                 <Image
                     width='100'
@@ -21,12 +43,12 @@ const Header = () => {
                     Discord{' '}
                 </h2>
                 <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                    My Discord account.
+                    <button>My Discord account.</button>
                 </p>
             </a>
 
             <a
-                href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+                href="https://github.com/FreddieCrew"
                 className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-400 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
                 target="_blank"
                 rel="noopener noreferrer"
