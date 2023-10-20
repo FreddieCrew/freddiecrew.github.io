@@ -1,2 +1,2 @@
 # freddiecrew.github.io
-My personal index website, nothing special
+My personal website, nothing special
