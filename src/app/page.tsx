@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer';
 import Head from 'next/head';
 import Header from '@/components/cards';
 import Toast from '@/components/Toast';
