@@ -4,7 +4,7 @@ import React from 'react';
 export default function About() {
 
   return (
-    <div className='about'>
+    <div className='root about'>
       <Navbar />
       <div className='container py-6'>
       <h2 className='ml-10 text-3xl text-white text-bold'>About me</h2>

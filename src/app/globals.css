@@ -19,9 +19,3 @@
 body {
   background: #1A202C;
 }
-
-@media screen and (max-width: 768px) {
-  .footer-title {
-    font-size: 8.5px;
-  }
-}
