@@ -19,7 +19,6 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <Header />
-      <Footer />
     </div>
   )
 }
