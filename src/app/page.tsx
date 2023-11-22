@@ -1,10 +1,9 @@
 'use client'
-import React from 'react';
-import Footer from '../../components/Footer';
+import Footer from '@/components/Footer';
 import Head from 'next/head';
-import Header from '../../components/header';
-import Toast from '../../components/Toast';
-import Navbar from '../../components/Nav';
+import Header from '@/components/header';
+import Toast from '@/components/Toast';
+import Navbar from '@/components/Nav';
 
 export default function Home() {
 

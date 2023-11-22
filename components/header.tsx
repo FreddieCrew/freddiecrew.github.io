@@ -1,27 +1,20 @@
 import React from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
 import Toast, { showToast } from './Toast';
 
-
 const Header = () => {
-    const handleShowSuccessToast = () => {
-        showToast('Discord user succesfully copied to the clipboard', 'success');
-      };
+  const handleShowSuccessToast = () => {
+    showToast('Discord user successfully copied to the clipboard', 'success');
+  };
 
-      const handleDivClick = () => {
-        try {
-          const textarea = document.createElement('textarea');
-          textarea.value = 'curl7120';
-          document.body.appendChild(textarea);
-          textarea.select();
-          document.execCommand('copy');
-          document.body.removeChild(textarea);
-          showToast('Discord user successfully copied to the clipboard', 'success');
-        } catch (error) {
-            showToast('Failed to copy username to the clipboard', 'error');
-        }
-      };
-
+  const handleDivClick = async () => {
+    try {
+      await navigator.clipboard.writeText('curl7120');
+      showToast('Discord user successfully copied to the clipboard', 'success');
+    } catch (error) {
+      showToast('Failed to copy username to the clipboard', 'error');
+    }
+  };
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -39,17 +32,17 @@ const Header = () => {
                     alt='Discord icon'
                     src='/discord-icon.svg'
                 />
-                <h2 className={`mb-3 text-2xl font-semibold`}>
+                <h2 className={`mt-3 text-2xl text-gray-200 font-semibold`}>
                     Discord{' '}
                 </h2>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                <p className={`mt-3 max-w-[30ch] text-gray-300 text-sm opacity-70`}>
                     <button>My Discord account.</button>
                 </p>
             </a>
 
             <a
                 href="https://github.com/FreddieCrew"
-                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-400 hover:text-white hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-400 hover:text-gray-500 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -59,10 +52,10 @@ const Header = () => {
                     alt='Github icon'
                     src='/github-icon.svg'
                 />
-                <h2 className={`mb-3 text-2xl font-semibold`}>
+                <h2 className={`mt-3 text-2xl font-semibold text-gray-300`}>
                     Github{' '}
                 </h2>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                <p className={`mt-3 max-w-[30ch] text-gray-200 text-sm opacity-70`}>
                     My github account.
                 </p>
             </a>

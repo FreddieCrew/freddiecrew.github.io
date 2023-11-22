@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Nav = () => {
   return (
     <footer className="bg-none text-white py-2">
