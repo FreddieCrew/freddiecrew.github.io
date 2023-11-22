@@ -1,7 +1,6 @@
-'use client'
 import Footer from '@/components/Footer';
 import Head from 'next/head';
-import Header from '@/components/header';
+import Header from '@/components/cards';
 import Toast from '@/components/Toast';
 import Navbar from '@/components/Nav';
 
