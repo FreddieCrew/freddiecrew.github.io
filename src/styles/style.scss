@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$background-color: #1A202C;
+
+body {
+    background-color: $background-color;
+}

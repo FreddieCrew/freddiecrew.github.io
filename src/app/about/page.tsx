@@ -1,5 +1,4 @@
-import Navbar from '../../../components/Nav';
-import React from 'react';
+import Navbar from '@/components/Nav';
 
 export default function About() {
 
