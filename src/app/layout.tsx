@@ -1,8 +1,8 @@
 import '../styles/style.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] })
+import HolidayBanner from '@/components/holidaybanner';
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'John | Links',
@@ -86,7 +86,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}><HolidayBanner />{children}</body>
     </html>
   )
 }
