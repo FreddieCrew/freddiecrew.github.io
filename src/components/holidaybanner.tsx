@@ -21,17 +21,17 @@ const HolidayBannerController: React.FC = () => {
 
   const isThanksgiving = () => {
     const currentDate = new Date();
-    const thanksgivingStart = new Date(currentDate.getFullYear(), 10, 22);
-    const thanksgivingEnd = new Date(currentDate.getFullYear(), 10, 30);
+    const thanksgivingStart = new Date(currentDate.getFullYear(), 10, 23);
 
-    return isAfter(currentDate, thanksgivingStart) && isBefore(currentDate, thanksgivingEnd);
+    return isSameDay(currentDate, thanksgivingStart);
   };
 
   const isChristmas = () => {
     const currentDate = new Date();
-    const christmasDay = new Date(currentDate.getFullYear(), 11, 25);
+    const christmasStart = new Date(currentDate.getFullYear(), 11, 25);
+    const christmasEnd = new Date(currentDate.getFullYear(), 11, 26);
 
-    return isSameDay(currentDate, christmasDay);
+    return isAfter(currentDate, christmasStart) && isBefore(currentDate, christmasEnd);
   };
 
   const renderBanner = () => {
