@@ -7,7 +7,7 @@ import Cookies from 'js-cookie';
 const COOKIE_NAME = 'holidayBannerClosed';
 
 const HolidayBannerController: React.FC = () => {
-  const [isBannerVisible, setIsBannerVisible] = useState(true);
+  const [isBannerVisible, setIsBannerVisible] = useState(false);
 
   useEffect(() => {
     const isClosed = Cookies.get(COOKIE_NAME);
@@ -22,7 +22,7 @@ const HolidayBannerController: React.FC = () => {
   const isThanksgiving = () => {
     const currentDate = new Date();
     const thanksgivingStart = new Date(currentDate.getFullYear(), 10, 22);
-    const thanksgivingEnd = new Date(currentDate.getFullYear(), 10, 30); 
+    const thanksgivingEnd = new Date(currentDate.getFullYear(), 10, 30);
 
     return isAfter(currentDate, thanksgivingStart) && isBefore(currentDate, thanksgivingEnd);
   };
@@ -34,8 +34,7 @@ const HolidayBannerController: React.FC = () => {
     return isSameDay(currentDate, christmasDay);
   };
 
-
-  const decideWhichBanner = () => {
+  const renderBanner = () => {
     if (isBannerVisible && (isThanksgiving() || isChristmas())) {
       return (
         <div className="relative">
@@ -54,7 +53,11 @@ const HolidayBannerController: React.FC = () => {
     return null;
   };
 
-  return <>{decideWhichBanner()}</>;
+  return (
+    <div style={{ visibility: isBannerVisible ? 'visible' : 'hidden' }}>
+      {renderBanner()}
+    </div>
+  );
 };
 
 export default HolidayBannerController;
