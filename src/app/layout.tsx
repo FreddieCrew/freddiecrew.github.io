@@ -1,7 +1,8 @@
+
 import '../styles/style.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import HolidayBanner from '@/components/holidaybanner';
+import HolidayBanner from '@/components/Holidaybanner';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -74,11 +75,12 @@ export default function RootLayout({
     `;
   }
   const asciiArt = getAsciiArt();
+
   return (
     <html lang="en">
       
       <head>
-        <script dangerouslySetInnerHTML={{ __html: `/*\n${asciiArt}\n*/` }} />
+        <script dangerouslySetInnerHTML={{ __html: `\n/*${asciiArt}*/\n` }} />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />

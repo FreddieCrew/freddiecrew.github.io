@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import HolidayBanner from './holidaycheck';
+import HolidayBanner from './Holidaycheck';
 import { isAfter, isBefore, isSameDay } from 'date-fns';
 import Cookies from 'js-cookie';
 
