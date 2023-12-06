@@ -10,7 +10,7 @@ export default function About() {
                     <h2 className='text-3xl font-semibold text-center'>Skills and Education</h2>
                     <div className="border-b-2 border-gray-300 my-3 mx-auto w-1/2"></div>
                     <div className='skills p-5 text-center'>
-                        <h3 className='text-2xl'>Languages and Frameworks</h3>
+                        <h3 className='text-2xl'>Languages and Technologies</h3>
                         <div className='languages flex flex-wrap justify-center mt-2'>
                             <SkillCard title='C' />
                             <SkillCard title='C++' />
@@ -29,6 +29,7 @@ export default function About() {
                         <div className='spokenlanguages flex flex-wrap justify-center mt-2'>
                             <SkillCard title='English (Native)' />
                             <SkillCard title='Spanish (Advanced)' />
+                            <SkillCard title='French (Novice)' />
                         </div>
                     </div>
                     <div className='education p-5'>
