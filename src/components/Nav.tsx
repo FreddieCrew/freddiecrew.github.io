@@ -17,6 +17,9 @@ const Nav = () => {
             <Link href='/skills' className="hover:opacity-80">
               Skills
             </Link>
+            <Link href='https://freddiecrew-blog.vercel.app/' className="hover:opacity-80">
+              Blog
+            </Link>
           </ul>
         </div>
       </nav>
