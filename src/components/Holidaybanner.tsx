@@ -28,8 +28,8 @@ const HolidayBannerController: React.FC = () => {
 
   const isChristmas = () => {
     const currentDate = new Date();
-    const christmasStart = new Date(currentDate.getFullYear(), 11, 25);
-    const christmasEnd = new Date(currentDate.getFullYear(), 11, 26);
+    const christmasStart = new Date(currentDate.getFullYear(), 11, 20);
+    const christmasEnd = new Date(currentDate.getFullYear(), 11, 30);
 
     return isAfter(currentDate, christmasStart) && isBefore(currentDate, christmasEnd);
   };
